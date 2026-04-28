@@ -14,11 +14,34 @@ echo "Skannataan sessiot viimeiseltä ${DAYS} päivältä..."
 
 # Extract user messages from all JSONL files modified in last N days
 python3 << PYEOF
-import json, os, glob, sys
+import json, os, glob, sys, re
 from datetime import datetime, timezone, timedelta
 
 sessions_dir = os.path.expanduser("$SESSIONS_DIR")
 cutoff = datetime.now(timezone.utc) - timedelta(days=$DAYS)
+
+# Patterns that look like secrets — redact these
+SECRET_PATTERNS = [
+    r'ghp_[A-Za-z0-9]{36,}',
+    r'github_pat_[A-Za-z0-9_]{80,}',
+    r'gho_[A-Za-z0-9]{36,}',
+    r'sk-[A-Za-z0-9]{40,}',
+    r'sk-ant-[A-Za-z0-9\-_]{80,}',
+    r'Bearer\s+[A-Za-z0-9\-_\.]{20,}',
+    r'[A-Za-z0-9+/]{40,}={0,2}',  # base64-looking long strings
+    r'eyJ[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+',  # JWT
+]
+SECRET_RE = re.compile('|'.join(SECRET_PATTERNS))
+
+def redact(text):
+    return SECRET_RE.sub('[REDACTED]', text)
+
+def looks_like_secret(text):
+    # Skip messages that are purely a secret token
+    stripped = text.strip()
+    if SECRET_RE.fullmatch(stripped):
+        return True
+    return False
 
 projects = {}
 total_messages = 0
@@ -50,19 +73,22 @@ for filepath in jsonl_files:
                     if obj.get("type") == "user" and obj.get("message", {}).get("role") == "user":
                         content = obj["message"].get("content", "")
                         if isinstance(content, str) and len(content.strip()) > 5:
+                            text = content.strip()
+                            if looks_like_secret(text):
+                                continue
                             ts = obj.get("timestamp", "")
                             messages.append({
                                 "ts": ts,
-                                "msg": content.strip()[:300]
+                                "msg": redact(text)[:300]
                             })
                         elif isinstance(content, list):
                             for block in content:
                                 if isinstance(block, dict) and block.get("type") == "text":
                                     text = block.get("text", "").strip()
-                                    if len(text) > 5:
+                                    if len(text) > 5 and not looks_like_secret(text):
                                         messages.append({
                                             "ts": obj.get("timestamp", ""),
-                                            "msg": text[:300]
+                                            "msg": redact(text)[:300]
                                         })
                 except:
                     continue
