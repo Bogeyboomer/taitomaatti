@@ -9,6 +9,10 @@ echo ""
 echo "=== Taitomaatti Sync ==="
 echo ""
 
+# Step 0: Scan sessions and push to GitHub first
+echo "Skannataan sessiot..."
+bash "$TAITOMAATTI_DIR/skannaa-sessiot.sh"
+
 # Pull from GitHub
 echo "Haetaan muutokset GitHubista..."
 git fetch origin main --quiet
