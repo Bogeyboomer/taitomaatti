@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <title>Taitomaatti — Järjestelmätiedot</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+  <div class="app">
+
+    <nav class="sidebar">
+      <div class="sidebar__pill">
+        <button class="nav-item"><span class="icon">⌂</span>Koti</button>
+        <button class="nav-item"><span class="icon">◈</span>Taidot</button>
+        <button class="nav-item"><span class="icon">▤</span>Projektit</button>
+        <button class="nav-item is-active"><span class="icon">⚙</span>Järjestelmä­tiedot</button>
+        <button class="nav-item"><span class="icon">◎</span>Finan</button>
+        <button class="nav-item"><span class="icon">🛡</span>Aegis</button>
+        <button class="nav-item"><span class="icon">☍</span>Social Agent</button>
+      </div>
+    </nav>
+
+    <header class="titlebar">
+      <div class="plaque">Järjestelmätiedot</div>
+    </header>
+
+    <main class="main">
+      <div class="board">
+
+        <!-- Sarake 1: Taidot -->
+        <div class="col">
+          <section class="panel">
+            <header class="panel__header"><h2 class="panel__title">Taidot</h2></header>
+            <p class="label">Taitojen kokonaismäärä
+              <span class="badge badge--amber">deduplikoitu</span></p>
+            <div class="stat"><span class="stat__value">14 978</span></div>
+            <div class="subhead">Kategoriajakauma <span class="panel__source">(catCounts)</span></div>
+            <div class="inset">
+              <div class="bars bars--3d" role="img" aria-label="Kategoriajakauma">
+                <span class="bars__bar" style="height: 16%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 38%"></span>
+                <span class="bars__bar" style="height: 52%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 64%"></span>
+                <span class="bars__bar" style="height: 100%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 86%"></span>
+                <span class="bars__bar" style="height: 46%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 30%"></span>
+                <span class="bars__bar" style="height: 22%"></span>
+              </div>
+            </div>
+            <div class="subhead">Yksilölliset käytetyt taidot</div>
+            <div class="row">
+              <div class="donut" style="--s1: 42; --s2: 28; --s3: 14"></div>
+              <div class="legend grow">
+                <span><i style="background: var(--blue-400)"></i>Työnkulut <span class="muted">42%</span></span>
+                <span><i style="background: var(--amber-400)"></i>Analyysit <span class="muted">28%</span></span>
+                <span><i style="background: var(--orange-500)"></i>Integraatiot <span class="muted">14%</span></span>
+                <span><i style="background: var(--green-400)"></i>Muut <span class="muted">16%</span></span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sarake 2: Käyttö -->
+        <div class="col">
+          <section class="panel">
+            <header class="panel__header">
+              <h2 class="panel__title">Käyttö</h2>
+              <span class="panel__source">(usage_log)</span>
+            </header>
+            <p class="label">Käyttökerrat yhteensä</p>
+            <div class="stat"><span class="stat__value stat__value--amber">1 520</span></div>
+            <div class="subhead">15 viimeisintä käyttöä <span class="panel__source">(taito, aika, konteksti)</span></div>
+            <div class="loglist">[<span class="lg-a">react-testaus</span>] <span class="lg-d">–</span> [09:45] <span class="lg-d">–</span> [KontekstiText]
+[<span class="lg-a">git-tyonkulut</span>] <span class="lg-d">–</span> [09:38] <span class="lg-d">–</span> [KontekstiText]
+[<span class="lg-a">shadcn-ui</span>] <span class="lg-d">–</span> [09:21] <span class="lg-d">–</span> [KontekstiText]
+[<span class="lg-a">api-testaus</span>] <span class="lg-d">–</span> [08:57] <span class="lg-d">–</span> [KontekstiText]
+[<span class="lg-a">ultraplan</span>] <span class="lg-d">–</span> [08:44] <span class="lg-d">–</span> [KontekstiText]
+[<span class="lg-a">data-analyysi</span>] <span class="lg-d">–</span> [08:12] <span class="lg-d">–</span> [KontekstiText]
+[<span class="lg-a">vite-paivitys</span>] <span class="lg-d">–</span> [07:58] <span class="lg-d">–</span> [KontekstiText]</div>
+            <div class="subhead">Top 4 käytetyintä taitoa</div>
+            <div class="hbar-list">
+              <div class="hbar">
+                <span class="hbar__label">1. Käyttöpisteet</span><span class="hbar__value">38%</span>
+                <span class="hbar__track"><span class="hbar__fill" style="width: 38%"></span></span>
+              </div>
+              <div class="hbar">
+                <span class="hbar__label">2. Kontekstit</span><span class="hbar__value">30%</span>
+                <span class="hbar__track"><span class="hbar__fill" style="width: 30%"></span></span>
+              </div>
+              <div class="hbar">
+                <span class="hbar__label">3. Taikoo</span><span class="hbar__value">19%</span>
+                <span class="hbar__track"><span class="hbar__fill hbar__fill--amber" style="width: 19%"></span></span>
+              </div>
+              <div class="hbar">
+                <span class="hbar__label">4. Sessiot</span><span class="hbar__value">12%</span>
+                <span class="hbar__track"><span class="hbar__fill" style="width: 12%"></span></span>
+              </div>
+            </div>
+            <div class="subhead">Viikkoaktiivisuus 7 päivältä</div>
+            <div class="inset">
+              <svg class="chart-line" viewBox="0 0 200 56" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f2b04e" stop-opacity="0.45" />
+                    <stop offset="1" stop-color="#f2b04e" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path d="M0,44 C18,40 28,16 48,21 C68,26 78,8 100,13 C122,18 132,38 152,30 C172,22 186,34 200,27 L200,56 L0,56 Z" fill="url(#lg1)" />
+                <path d="M0,44 C18,40 28,16 48,21 C68,26 78,8 100,13 C122,18 132,38 152,30 C172,22 186,34 200,27" fill="none" stroke="#f2b04e" stroke-width="2" />
+              </svg>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sarake 3: Aukot -->
+        <div class="col">
+          <section class="panel">
+            <header class="panel__header">
+              <h2 class="panel__title">Aukot</h2>
+              <span class="panel__source">(gap_log)</span>
+            </header>
+            <div class="stat-row">
+              <div class="stat"><span class="label">Aukkojen kokonaismäärä</span>
+                <span class="stat__value">1 280</span></div>
+              <div class="stat"><span class="label">Avoimet aukot</span>
+                <span class="stat__value stat__value--blue">0</span></div>
+            </div>
+            <div class="subhead">10 viimeisintä</div>
+            <div class="loglist">• [Aukkokuvaus] <span class="lg-d">–</span> [<span class="lg-a">AlkaStamp</span>]
+• [Aukkokuvaus] <span class="lg-d">–</span> [<span class="lg-a">AlkaStamp</span>]
+• [Aukkokuvaus] <span class="lg-d">–</span> [<span class="lg-a">AlkaStamp</span>]
+• [Aukkokuvaus] <span class="lg-d">–</span> [<span class="lg-a">AlkaStamp</span>]
+• [Aukkokuvaus] <span class="lg-d">–</span> [<span class="lg-a">AlkaStamp</span>]
+• [Aukkokuvaus] <span class="lg-d">–</span> [<span class="lg-a">AlkaStamp</span>]</div>
+          </section>
+          <section class="panel">
+            <header class="panel__header">
+              <h2 class="panel__title">Aukot</h2>
+              <span class="panel__source">(gap_log)</span>
+            </header>
+            <div class="subhead">Kuukausittainen 30 päivältä</div>
+            <div class="inset">
+              <svg class="chart-line" viewBox="0 0 200 56" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f2b04e" stop-opacity="0.45" />
+                    <stop offset="1" stop-color="#f2b04e" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path d="M0,50 C15,48 25,30 40,34 C58,39 66,18 84,22 C100,25 110,42 126,36 C144,29 152,12 168,16 C182,19 192,30 200,26 L200,56 L0,56 Z" fill="url(#lg2)" />
+                <path d="M0,50 C15,48 25,30 40,34 C58,39 66,18 84,22 C100,25 110,42 126,36 C144,29 152,12 168,16 C182,19 192,30 200,26" fill="none" stroke="#f2b04e" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="subhead">10 viimeisintä</div>
+            <div class="loglist">• [Aukkokuvaus] <span class="lg-d">–</span> [KontekstiText]
+• [Aukkokuvaus] <span class="lg-d">–</span> [KontekstiText]
+• [Aukkokuvaus] <span class="lg-d">–</span> [KontekstiText]
+• [Aukkokuvaus] <span class="lg-d">–</span> [KontekstiText]</div>
+          </section>
+        </div>
+
+        <!-- Sarake 4: NEXi-komennot + Sessiolaatu (korostepaneelit) -->
+        <div class="col">
+          <section class="panel panel--accent">
+            <header class="panel__header">
+              <h2 class="panel__title">NEXi-komennot</h2>
+              <span class="panel__source">(nexi_commands)</span>
+              <a class="panel__action" href="#">+ uusi</a>
+            </header>
+            <div class="row row--top">
+              <div class="grow">
+                <p class="label">Komentojen kokonaismäärä</p>
+                <div class="stat"><span class="stat__value stat__value--amber">124 670</span></div>
+              </div>
+              <div>
+                <p class="label">Jakauma tyypeittäin</p>
+                <div class="row">
+                  <div class="donut" style="--size: 64px; --s1: 38; --s2: 32; --s3: 18"></div>
+                  <div class="legend">
+                    <span><i style="background: var(--blue-400)"></i>navigaatio</span>
+                    <span><i style="background: var(--amber-400)"></i>quick</span>
+                    <span><i style="background: var(--orange-500)"></i>llm</span>
+                    <span><i style="background: var(--green-400)"></i>system</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="subhead">20 viimeisintä <span class="panel__source">(teksti, vastaus, tyyppi, aika)</span></div>
+            <div class="terminal"><span class="t-key">Komentoteksti</span>     <span class="t-val">Vastaus</span>  Tyyppi  AikaStamp
+<span class="t-dim">───────────────────────────────────────────────</span>
+skill.scan         <span class="t-ok">OK</span>       NAV    2026-06-12 09:50
+usage.report       <span class="t-ok">OK</span>       QUICK  2026-06-12 09:48
+llm.analyze        <span class="t-val">RUN</span>      LLM    2026-06-12 09:45
+gap.detect         <span class="t-err">ERR</span>      SYS    2026-06-12 09:41
+session.sync       <span class="t-ok">OK</span>       SYS    2026-06-12 09:36
+decay.score        <span class="t-ok">OK</span>       LLM    2026-06-12 09:30</div>
+          </section>
+
+          <section class="panel panel--accent">
+            <header class="panel__header">
+              <h2 class="panel__title">Sessiolaatu</h2>
+              <span class="panel__source">(session_quality)</span>
+              <a class="panel__action" href="#">+ uusi</a>
+            </header>
+            <div class="stat-row">
+              <div class="stat"><span class="label">Analysoitujen sessioiden määrä</span>
+                <span class="stat__value stat__value--sm stat__value--amber">40</span></div>
+              <div class="stat"><span class="label">Keskimääräinen laatupisteet</span>
+                <span class="stat__value stat__value--sm">86</span></div>
+            </div>
+            <div class="subhead">Top 5 parasta sessiota</div>
+            <table class="table">
+              <thead>
+                <tr><th>Sessiot</th><th class="num">Viestit</th><th class="num">Tokenit</th><th class="num">Pisteet</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1. Analysoitujen sessiot</td><td class="num">10</td><td class="num">2 000</td><td class="num">12 000</td></tr>
+                <tr><td>2. Kontekstikartoitus</td><td class="num">24</td><td class="num">1 480</td><td class="num">9 400</td></tr>
+                <tr><td>3. Mallinjakoanalyysi</td><td class="num">9</td><td class="num">980</td><td class="num">3 105</td></tr>
+                <tr><td>4. Taitoskannaus</td><td class="num">8</td><td class="num">760</td><td class="num">2 047</td></tr>
+                <tr><td>5. Raportointiajo</td><td class="num">6</td><td class="num">540</td><td class="num">1 315</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <!-- Sarake 5: Rappeutuminen + Terveyspisteet -->
+        <div class="col">
+          <section class="panel">
+            <header class="panel__header">
+              <h2 class="panel__title">Rappeutuminen &amp; skanaukset</h2>
+            </header>
+            <div class="kv">
+              <div><span class="kv__key">decay-report.json</span>
+                <span class="kv__val">1 267 / 8 / 77</span></div>
+              <div><span class="kv__key">daily-scan-log.json</span>
+                <span class="badge badge--green" style="margin-left: auto">ajantasalla</span></div>
+              <div><span class="kv__key">pending-analysis.json</span>
+                <span class="kv__val">status</span></div>
+            </div>
+            <div class="progress" style="margin-top: 8px">
+              <span class="progress__fill" style="width: 36%"></span>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header class="panel__header">
+              <h2 class="panel__title">Terveyspisteet</h2>
+              <span class="panel__source">(0–100)</span>
+            </header>
+            <div class="ring-gauge">
+              <i class="ring ring--ticks"></i>
+              <i class="ring" style="--p: 30; --c: var(--orange-500); --i: 4px"></i>
+              <i class="ring" style="--p: 55; --c: var(--blue-400); --i: 18px"></i>
+              <i class="ring" style="--p: 72; --c: var(--amber-300); --i: 32px"></i>
+              <i class="ring" style="--p: 44; --c: var(--green-400); --i: 46px"></i>
+              <div class="ring-gauge__center">
+                <span class="label">Terveyspisteet</span>
+                <span class="ring-gauge__value">30%</span>
+              </div>
+            </div>
+            <div class="legend" style="flex-direction: row; flex-wrap: wrap; gap: 8px; justify-content: center">
+              <span><i style="background: var(--orange-500)"></i>usageRate</span>
+              <span><i style="background: var(--blue-400)"></i>decayScore</span>
+              <span><i style="background: var(--amber-300)"></i>activityScore</span>
+              <span><i style="background: var(--green-400)"></i>agentScore</span>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sarake 6: measurement:ai -->
+        <div class="col">
+          <section class="panel">
+            <header class="panel__header">
+              <h2 class="panel__title">measurement:ai</h2>
+              <span class="panel__source">Claude Code -käyttö</span>
+            </header>
+            <div class="stat-row">
+              <div class="stat"><span class="label">Sessiot</span>
+                <span class="stat__value stat__value--sm">136</span></div>
+              <div class="stat"><span class="label">Viestit</span>
+                <span class="stat__value stat__value--sm stat__value--amber">13 633</span></div>
+              <div class="stat"><span class="label">Tokenit</span>
+                <span class="stat__value stat__value--sm stat__value--blue">4 890</span></div>
+            </div>
+            <div class="subhead">Tänään: viestit + tokenit <span class="panel__source">(30 pv)</span></div>
+            <div class="inset">
+              <div class="bars bars--spark" aria-hidden="true">
+                <span class="bars__bar bars__bar--blue" style="height: 24%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 40%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 18%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 56%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 72%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 38%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 90%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 64%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 30%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 48%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 78%"></span>
+                <span class="bars__bar bars__bar--blue" style="height: 52%"></span>
+              </div>
+            </div>
+            <div class="subhead">Top 8 projektia <span class="panel__source">(sessiot, viestit, tokenit)</span></div>
+            <div class="bubbles" aria-hidden="true">
+              <span class="bubble" style="left: 4%; top: 12%; width: 52px; height: 52px">1300</span>
+              <span class="bubble" style="left: 36%; top: 4%; width: 38px; height: 38px">390</span>
+              <span class="bubble bubble--amber" style="left: 60%; top: 18%; width: 30px; height: 30px">206</span>
+              <span class="bubble" style="left: 26%; top: 52%; width: 26px; height: 26px">98</span>
+              <span class="bubble" style="left: 50%; top: 56%; width: 34px; height: 34px">160</span>
+              <span class="bubble bubble--amber" style="left: 76%; top: 48%; width: 22px; height: 22px">55</span>
+              <span class="bubble" style="left: 84%; top: 10%; width: 26px; height: 26px">73</span>
+            </div>
+            <div class="subhead">Mallijakauma <span class="panel__source">(Sonnet/Opus/Haiku)</span></div>
+            <div class="row">
+              <div class="donut" style="--size: 60px; --s1: 52; --s2: 30; --s3: 12"></div>
+              <ul class="feed grow">
+                <li><span class="status-dot"></span> Session skannaus valmis
+                  <span class="feed__meta">09:45</span></li>
+                <li><span class="status-dot status-dot--warn"></span> Agenttiajo kesken
+                  <span class="feed__meta">09:12</span></li>
+                <li><span class="status-dot status-dot--err"></span> Synkronointi epäonnistui
+                  <span class="feed__meta">08:30</span></li>
+              </ul>
+            </div>
+            <hr class="divider" />
+            <button class="btn btn--primary">Skannaa nyt</button>
+            <button class="btn">Raportti</button>
+          </section>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

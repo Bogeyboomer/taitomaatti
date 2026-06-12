@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Taitomaatti UI — design-tokenit
+   Sci-fi/HUD-dashboard: tumma lämmin pohja, meripihka/pronssi-aksentit,
+   sininen datavari. Kaikki arvot poimittu Järjestelmätiedot-näkymästä.
+   ========================================================================== */
+
+:root {
+  /* ----- Pohjavärit ----- */
+  --bg-0: #060403;            /* ikkunan syvin tausta */
+  --bg-1: #0e0a06;            /* yleistausta */
+  --bg-2: #171008;            /* kohotetut alueet */
+  --panel-bg: rgba(22, 15, 9, 0.88);
+  --panel-bg-solid: #171009;
+  --inset-bg: #0b0805;        /* upotetut alueet: terminaali, kaaviopohjat */
+
+  /* ----- Reunat ja viivat ----- */
+  --border: #6e5224;          /* paneelin perusreuna, pronssi */
+  --border-bright: #c8923f;   /* korostettu reuna, kulmamerkit */
+  --border-dim: #3a2c16;      /* jakajat, taulukkoviivat */
+
+  /* ----- Aksentti: meripihka / oranssi ----- */
+  --amber-200: #ffe2b0;
+  --amber-300: #ffce85;
+  --amber-400: #f2b04e;       /* ensisijainen aksentti */
+  --amber-500: #e8973a;
+  --amber-600: #cf7a22;
+  --orange-500: #ff8c2e;      /* korostepaneelien otsikot, "+ uusi" */
+  --orange-600: #e06a14;
+
+  /* ----- Data: sininen ----- */
+  --blue-300: #8cc3ff;
+  --blue-400: #5aa9ff;        /* ensisijainen datavari */
+  --blue-500: #3d8ef0;
+  --blue-600: #2a6fd0;
+
+  /* ----- Statusvärit ----- */
+  --green-400: #49d68a;
+  --red-400: #ff5d3a;
+
+  /* ----- Teksti ----- */
+  --text-hi: #f7ecd4;         /* otsikot, suuret luvut */
+  --text: #d9c9a6;            /* leipäteksti */
+  --text-dim: #94815f;        /* aputeksti, yksiköt */
+  --text-faint: #5e5138;      /* passiiviset elementit */
+  --text-on-accent: #1b0f04;  /* teksti oranssin gradientin päällä */
+
+  /* ----- Hehkut ja varjot ----- */
+  --glow-amber: 0 0 14px rgba(242, 176, 78, 0.28);
+  --glow-amber-strong: 0 0 22px rgba(255, 140, 46, 0.45);
+  --glow-blue: 0 0 12px rgba(90, 169, 255, 0.30);
+  --shadow-panel: 0 4px 24px rgba(0, 0, 0, 0.55), var(--glow-amber);
+
+  /* ----- Typografia ----- */
+  --font-ui: "Bahnschrift", "Saira Semi Condensed", "Roboto Condensed",
+             "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Mono", "Consolas",
+               "DejaVu Sans Mono", monospace;
+  --tracking-head: 0.06em;    /* otsikoiden harvennus */
+  --tracking-label: 0.10em;   /* pienet versaalilabelit */
+
+  /* ----- Mitat ----- */
+  --radius-panel: 10px;
+  --radius-inset: 6px;
+  --radius-pill: 999px;
+  --notch: 12px;              /* paneelin viistetty kulma */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --sidebar-w: 76px;
+
+  /* ----- Kaaviopaletti (sama kuin chart-theme.js) ----- */
+  --chart-1: var(--blue-400);
+  --chart-2: var(--amber-400);
+  --chart-3: var(--orange-500);
+  --chart-4: var(--green-400);
+  --chart-5: var(--red-400);
+  --chart-6: var(--cream, #f7ecd4);
+  --chart-grid: rgba(110, 82, 36, 0.25);
+}

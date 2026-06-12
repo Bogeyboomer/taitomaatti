@@ -1,0 +1,730 @@
+/* ==========================================================================
+   Taitomaatti UI — komponentit
+   Sovelluksen runko, sivupalkki, otsikkoplakaatti, viistekulmaiset paneelit,
+   statit, badget, kaaviot (palkit, donitsit, renkaat, kuplat), terminaali,
+   taulukot, napit.
+   ========================================================================== */
+
+/* ----- Sovelluksen runko ----- */
+
+.app {
+  position: relative; /* 3D-taustakerrosten yläpuolelle */
+  z-index: 1;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: 56px 1fr;
+  grid-template-areas:
+    "sidebar titlebar"
+    "sidebar main";
+  height: 100vh;
+}
+
+.main {
+  grid-area: main;
+  overflow: auto;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+
+/* Dashboard: kiinteät sarakkeet kuten lähdekuvassa; kapealla vieritys */
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(235px, 1fr));
+  gap: var(--space-3);
+  min-width: 1480px;
+  align-items: start;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.col--wide { grid-column: span 2; }
+
+/* ----- Yläpalkki ja otsikkoplakaatti ----- */
+
+.titlebar {
+  grid-area: titlebar;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-app-region: drag; /* ikkunaa voi raahata yläpalkista */
+}
+
+/* Koristelinjat + varoitusraidat plakaatin molemmin puolin */
+.titlebar::before,
+.titlebar::after {
+  content: "";
+  flex: 1;
+  height: 12px;
+  margin: 0 18px;
+  background:
+    repeating-linear-gradient(-45deg, var(--amber-600) 0 7px, transparent 7px 14px)
+      left center / 90px 7px no-repeat,
+    linear-gradient(90deg, var(--border-bright), var(--border-dim))
+      left bottom / 100% 1px no-repeat;
+}
+
+.titlebar::before { transform: scaleX(-1); }
+
+.plaque {
+  -webkit-app-region: no-drag;
+  padding: 7px 52px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-hi);
+  letter-spacing: var(--tracking-head);
+  background: linear-gradient(180deg, rgba(44, 30, 14, 0.95), rgba(14, 9, 5, 0.95));
+  border: 1px solid var(--border-bright);
+  /* Viistetyt päädyt kuten kuvan otsikkokilvessä */
+  clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 50%,
+                     calc(100% - 18px) 100%, 18px 100%, 0 50%);
+  text-shadow: 0 0 12px rgba(247, 236, 212, 0.45);
+}
+
+/* ----- Sivupalkki: kelluva pyöristetty kapseli (kuten lähdekuvassa) ----- */
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  align-items: center;
+  padding: 12px 6px 12px 10px;
+}
+
+.sidebar__pill {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 14px 5px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(28, 19, 10, 0.94), rgba(9, 6, 3, 0.94));
+  box-shadow: var(--glow-amber), inset 0 0 20px rgba(0, 0, 0, 0.65);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  padding: 8px 2px;
+  border: none;
+  border-radius: 12px;
+  background: none;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Ikoni omassa pyöristetyssä kehyksessään */
+.nav-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid var(--border-dim);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-item:hover { color: var(--text); }
+.nav-item:hover .icon { border-color: var(--border); }
+
+.nav-item.is-active { color: var(--amber-300); }
+
+.nav-item.is-active .icon {
+  border-color: var(--border-bright);
+  background: rgba(232, 151, 58, 0.12);
+  box-shadow: inset 0 0 10px rgba(232, 151, 58, 0.2), var(--glow-amber);
+  color: var(--amber-300);
+}
+
+/* ----- Paneeli: viistetyt kulmat + kultainen gradienttireuna ----- */
+
+.panel {
+  --chamfer: 14px;
+  position: relative;
+  padding: 13px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.55))
+          drop-shadow(0 0 9px rgba(232, 151, 58, 0.14));
+}
+
+/* Reunakerros (gradientti-"kulta") */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(155deg,
+    var(--border-bright), var(--border) 28%, #4d371a 65%, var(--border-bright));
+  clip-path: polygon(
+    var(--chamfer) 0, 100% 0,
+    100% calc(100% - var(--chamfer)),
+    calc(100% - var(--chamfer)) 100%,
+    0 100%, 0 var(--chamfer));
+}
+
+/* Taustakerros 1px reunan sisällä */
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background:
+    linear-gradient(180deg, rgba(255, 200, 120, 0.06), transparent 26%),
+    var(--panel-bg-solid);
+  clip-path: polygon(
+    calc(var(--chamfer) - 1px) 0, 100% 0,
+    100% calc(100% - var(--chamfer) + 1px),
+    calc(100% - var(--chamfer) + 1px) 100%,
+    0 100%, 0 calc(var(--chamfer) - 1px));
+}
+
+.panel > * { position: relative; z-index: 1; }
+
+.panel__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  padding-left: 4px;
+}
+
+/* Otsikosta lähtevä häivytetty linja */
+.panel__header::after {
+  content: "";
+  flex: 1;
+  align-self: center;
+  height: 1px;
+  margin-left: 6px;
+  background: linear-gradient(90deg, var(--border-bright), transparent);
+}
+
+.panel__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber-300);
+  text-shadow: 0 0 8px rgba(255, 206, 133, 0.35);
+}
+
+.panel__source {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.panel__action {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--orange-500);
+}
+
+/* Korostepaneeli: oranssi gradienttiotsikko (NEXi-komennot, Sessiolaatu) */
+.panel--accent::before {
+  background: linear-gradient(155deg,
+    var(--orange-500), var(--border-bright) 30%, var(--border) 65%, var(--orange-500));
+}
+
+.panel--accent > .panel__header {
+  margin: -12px -12px 10px;
+  padding: 7px 12px 7px 18px;
+  background: linear-gradient(90deg, var(--orange-600), var(--amber-600) 55%,
+              rgba(207, 122, 34, 0.2));
+  clip-path: polygon(
+    calc(var(--chamfer) - 1px) 0, 100% 0, 100% 100%, 0 100%,
+    0 calc(var(--chamfer) - 1px));
+}
+
+.panel--accent > .panel__header::after { display: none; }
+.panel--accent > .panel__header .panel__title { color: var(--text-hi); }
+.panel--accent > .panel__header .panel__source { color: rgba(247, 236, 212, 0.8); }
+.panel--accent > .panel__header .panel__action { margin-left: auto; color: #ffe9c4; }
+
+/* Alaotsikko paneelin sisällä */
+.subhead {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: var(--space-2) 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.subhead .panel__source { font-size: 9px; }
+
+/* ----- Tilastoluvut ----- */
+
+.stat { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+
+.stat__value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-hi);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-shadow: 0 0 12px rgba(247, 236, 212, 0.3);
+}
+
+.stat__value--amber { color: var(--amber-300); text-shadow: var(--glow-amber); }
+.stat__value--blue  { color: var(--blue-400);  text-shadow: var(--glow-blue); }
+.stat__value--sm    { font-size: 19px; }
+
+.stat-row { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+
+/* ----- Badget ja chipit ----- */
+
+.badge {
+  display: inline-block;
+  padding: 1px 9px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+
+.badge--amber {
+  color: var(--text-on-accent);
+  background: linear-gradient(180deg, var(--orange-500), var(--orange-600));
+  box-shadow: var(--glow-amber);
+}
+
+.badge--green { color: #06140c; background: var(--green-400); }
+
+.badge--outline {
+  color: var(--amber-300);
+  border: 1px solid var(--border);
+  background: rgba(232, 151, 58, 0.08);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green-400);
+  box-shadow: 0 0 8px var(--green-400);
+}
+
+.status-dot--warn { background: var(--orange-500); box-shadow: 0 0 8px var(--orange-500); }
+.status-dot--err  { background: var(--red-400);    box-shadow: 0 0 8px var(--red-400); }
+
+/* ----- Upotettu kaaviopohja ----- */
+
+.inset {
+  background:
+    repeating-linear-gradient(180deg, var(--chart-grid) 0 1px, transparent 1px 22px),
+    var(--inset-bg);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-inset);
+  padding: var(--space-2);
+}
+
+/* ----- Pystypalkkikaavio (CSS-vain, kiiltävä yläreuna = 3D-vaikutelma) ----- */
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 110px;
+}
+
+.bars--spark { height: 56px; gap: 2px; }
+
+.bars__bar {
+  flex: 1;
+  min-width: 5px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, var(--amber-300), var(--amber-600) 80%);
+  box-shadow: inset 0 2px 0 rgba(255, 232, 190, 0.9), var(--glow-amber);
+}
+
+.bars__bar--blue {
+  background: linear-gradient(180deg, var(--blue-300), var(--blue-600) 80%);
+  box-shadow: inset 0 2px 0 rgba(200, 226, 255, 0.9), var(--glow-blue);
+}
+
+/* 3D-palkit: ylä- ja kylkipinta skew-muunnoksilla (kuutiomainen vaikutelma) */
+
+.bars--3d { padding-top: 8px; padding-right: 8px; }
+
+.bars--3d .bars__bar {
+  position: relative;
+  border-radius: 0;
+  box-shadow: var(--glow-amber);
+  background: linear-gradient(180deg, var(--amber-400), var(--amber-600) 85%);
+}
+
+.bars--3d .bars__bar::before { /* yläpinta */
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--amber-200);
+  transform: skewX(-45deg);
+  transform-origin: bottom left;
+}
+
+.bars--3d .bars__bar::after { /* kylkipinta */
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: 0;
+  right: -5px;
+  width: 5px;
+  background: #8a5618;
+  transform: skewY(-45deg);
+  transform-origin: top left;
+}
+
+.bars--3d .bars__bar--blue {
+  box-shadow: var(--glow-blue);
+  background: linear-gradient(180deg, var(--blue-400), var(--blue-600) 85%);
+}
+
+.bars--3d .bars__bar--blue::before { background: var(--blue-300); }
+.bars--3d .bars__bar--blue::after { background: #1c4f9c; }
+
+/* ----- Viivakaavio (SVG:lle hehku ja täyttö) ----- */
+
+.chart-line { display: block; width: 100%; height: auto; }
+
+.chart-line path,
+.chart-line polyline {
+  filter: drop-shadow(0 0 4px rgba(242, 176, 78, 0.8));
+}
+
+/* ----- Vaakapalkkilista (Top-listat) ----- */
+
+.hbar-list { display: flex; flex-direction: column; gap: 4px; }
+
+.hbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2);
+  font-size: 11px;
+}
+
+.hbar__label { color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hbar__value { color: var(--text-dim); font-family: var(--font-mono); font-size: 10px; }
+
+.hbar__track {
+  grid-column: 1 / -1;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--inset-bg);
+  overflow: hidden;
+}
+
+.hbar__fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
+  box-shadow: var(--glow-blue);
+}
+
+.hbar__fill--amber {
+  background: linear-gradient(90deg, var(--amber-600), var(--amber-400));
+  box-shadow: var(--glow-amber);
+}
+
+/* ----- Edistymispalkki ----- */
+
+.progress {
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--inset-bg);
+  border: 1px solid var(--border-dim);
+  overflow: hidden;
+}
+
+.progress__fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange-600), var(--amber-400));
+  box-shadow: var(--glow-amber);
+}
+
+/* ----- Donitsikaavio (conic-gradient + reikämaski) -----
+   Käyttö: style="--d:conic-gradient(...)" tai oletussegmentit --s1..--s3 */
+
+.donut {
+  --s1: 45; --s2: 25; --s3: 15;
+  --size: 86px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--d, conic-gradient(
+    var(--blue-400) 0 calc(var(--s1) * 1%),
+    var(--amber-400) 0 calc((var(--s1) + var(--s2)) * 1%),
+    var(--orange-500) 0 calc((var(--s1) + var(--s2) + var(--s3)) * 1%),
+    var(--green-400) 0));
+  -webkit-mask: radial-gradient(closest-side, transparent 56%, #000 57%);
+  mask: radial-gradient(closest-side, transparent 56%, #000 57%);
+  filter: drop-shadow(0 0 6px rgba(90, 169, 255, 0.35));
+}
+
+.legend { display: flex; flex-direction: column; gap: 3px; font-size: 10px; }
+
+.legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+
+/* ----- Monirenkainen mittari (Terveyspisteet) -----
+   <div class="ring-gauge">
+     <i class="ring" style="--p:30; --c:var(--orange-500); --i:0px"></i>
+     <i class="ring" style="--p:55; --c:var(--blue-400);  --i:13px"></i>
+     ...
+     <i class="ring ring--ticks"></i>
+     <div class="ring-gauge__center">...</div>
+   </div> */
+
+.ring-gauge {
+  position: relative;
+  width: 170px;
+  aspect-ratio: 1;
+  margin: 4px auto;
+}
+
+.ring {
+  position: absolute;
+  inset: var(--i, 0px);
+  border-radius: 50%;
+  --p: 50;
+  --c: var(--amber-400);
+  --t: 8px;
+  background: conic-gradient(from -90deg,
+    var(--c) calc(var(--p) * 1%), rgba(255, 255, 255, 0.07) 0);
+  -webkit-mask: radial-gradient(closest-side,
+    transparent calc(100% - var(--t)), #000 calc(100% - var(--t) + 1px));
+  mask: radial-gradient(closest-side,
+    transparent calc(100% - var(--t)), #000 calc(100% - var(--t) + 1px));
+  filter: drop-shadow(0 0 5px var(--c));
+}
+
+/* Mitta-asteikon viivat uloimmalle kehälle */
+.ring--ticks {
+  inset: -7px;
+  --t: 4px;
+  background: repeating-conic-gradient(
+    rgba(247, 236, 212, 0.45) 0deg 1deg, transparent 1deg 7.5deg);
+  filter: none;
+}
+
+.ring-gauge__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1px;
+}
+
+.ring-gauge__center .label { font-size: 9px; }
+
+.ring-gauge__value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-hi);
+  text-shadow: var(--glow-amber);
+}
+
+/* ----- Kuplakaavio ----- */
+
+.bubbles { position: relative; height: 110px; }
+
+.bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, var(--blue-300), var(--blue-600) 75%);
+  box-shadow: var(--glow-blue), inset -2px -3px 6px rgba(0, 0, 0, 0.4);
+  font-size: 9px;
+  font-weight: 700;
+  color: #07101f;
+}
+
+.bubble--amber {
+  background: radial-gradient(circle at 32% 30%, var(--amber-300), var(--amber-600) 75%);
+  box-shadow: var(--glow-amber), inset -2px -3px 6px rgba(0, 0, 0, 0.4);
+  color: var(--text-on-accent);
+}
+
+/* ----- Terminaali / lokinäkymä ----- */
+
+.terminal {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.55;
+  color: var(--amber-300);
+  background: #040201;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-inset);
+  padding: var(--space-2);
+  overflow: auto;
+  max-height: 190px;
+  white-space: pre;
+}
+
+.terminal .t-key { color: var(--amber-500); }
+.terminal .t-val { color: var(--blue-400); }
+.terminal .t-ok  { color: var(--green-400); }
+.terminal .t-err { color: var(--red-400); }
+.terminal .t-dim { color: var(--text-faint); }
+
+/* ----- Lokirivilista ([Nimi] – [Aika] – [Konteksti]) ----- */
+
+.loglist {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--blue-400);
+  background: var(--inset-bg);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-inset);
+  padding: 5px 7px;
+  max-height: 130px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.loglist .lg-a { color: var(--amber-400); }
+.loglist .lg-d { color: var(--text-faint); }
+
+/* ----- Taulukko ----- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.table th {
+  text-align: left;
+  padding: 4px 6px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--border-dim);
+  color: var(--text);
+}
+
+.table tbody tr:nth-child(odd) { background: rgba(255, 255, 255, 0.02); }
+.table tbody tr:hover { background: rgba(232, 151, 58, 0.07); }
+.table .num { text-align: right; font-family: var(--font-mono); color: var(--blue-300); }
+
+/* ----- Avain–arvo-rivit (esim. decay-report.json) ----- */
+
+.kv { display: flex; flex-direction: column; gap: 3px; font-size: 11px; }
+
+.kv > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kv .kv__key { font-family: var(--font-mono); font-size: 10px; color: var(--text); }
+.kv .kv__val { margin-left: auto; font-family: var(--font-mono); color: var(--amber-300); }
+
+/* ----- Listarivit (viimeisimmät tapahtumat) ----- */
+
+.feed { list-style: none; display: flex; flex-direction: column; }
+
+.feed li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 2px;
+  font-size: 11px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.feed li:last-child { border-bottom: none; }
+
+.feed .feed__meta {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-faint);
+}
+
+/* ----- Napit ----- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+  color: var(--amber-300);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--glow-amber);
+  color: var(--amber-200);
+}
+
+.btn--primary {
+  border-color: var(--orange-600);
+  background: linear-gradient(180deg, var(--orange-500), var(--orange-600));
+  color: var(--text-on-accent);
+}
+
+.btn--primary:hover { box-shadow: var(--glow-amber-strong); color: #000; }
+
+/* ----- Jakajat ja apurit ----- */
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-dim);
+  margin: var(--space-2) 0;
+}
+
+.row { display: flex; gap: var(--space-3); align-items: center; }
+.row--top { align-items: flex-start; }
+.grow { flex: 1; min-width: 0; }
+
+.muted { color: var(--text-dim); }
+.amber { color: var(--amber-300); }
+.blue { color: var(--blue-400); }
+.green { color: var(--green-400); }
+.red { color: var(--red-400); }
