@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Taitomaatti UI — perustyylit
+   Nollaus, taustatunnelma, typografia, vierityspalkit.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text);
+  background-color: var(--bg-0);
+  /* Konehuonetunnelma: lämmin hehku ylhäällä, vinjetointi reunoilla */
+  background-image:
+    radial-gradient(1200px 400px at 50% -5%, rgba(207, 122, 34, 0.14), transparent 70%),
+    radial-gradient(900px 500px at 50% 108%, rgba(207, 122, 34, 0.10), transparent 70%),
+    radial-gradient(ellipse at center, rgba(23, 16, 8, 0.6), rgba(6, 4, 3, 0.95) 85%),
+    linear-gradient(var(--bg-1), var(--bg-0));
+  background-attachment: fixed;
+  overflow: hidden; /* Electron-ikkuna; sisäalueet vierittävät itse */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----- Typografia ----- */
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: var(--text-hi);
+  letter-spacing: var(--tracking-head);
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--text-dim);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+a,
+.link {
+  color: var(--blue-400);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+.link:hover {
+  color: var(--blue-300);
+  text-shadow: var(--glow-blue);
+}
+
+::selection {
+  background: rgba(242, 176, 78, 0.35);
+  color: var(--text-hi);
+}
+
+/* ----- Vierityspalkit ----- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--inset-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid var(--inset-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-bright);
+}
+
+/* ----- Fokus näppäimistökäyttäjille ----- */
+
+:focus-visible {
+  outline: 1px solid var(--amber-400);
+  outline-offset: 2px;
+  box-shadow: var(--glow-amber);
+}

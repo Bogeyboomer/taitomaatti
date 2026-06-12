@@ -1,0 +1,12 @@
+{
+  "name": "taitomaatti-ui",
+  "version": "0.1.0",
+  "description": "Taitomaatti Järjestelmätiedot -dashboardin visuaalinen teema Electron-sovellukseen",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}
