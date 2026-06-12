@@ -55,11 +55,29 @@ npm start
 
 ## Keskeiset komponenttiluokat
 
-- `.app`, `.sidebar`, `.nav-item`, `.titlebar`, `.plaque` — sovelluksen runko
-- `.panel`, `.panel--accent`, `.panel__header/__title/__source/__action`
-- `.stat`, `.stat__value(--amber|--blue)`, `.stat-row` — suuret tunnusluvut
+- `.app`, `.titlebar`, `.plaque` — sovelluksen runko ja viistetty otsikkokilpi
+  (varoitusraidat ja koristelinjat tulevat `.titlebar`-pseudoelementeistä)
+- `.sidebar` + `.sidebar__pill` + `.nav-item` — kelluva pyöristetty
+  navigaatiokapseli, ikonit omissa kehyksissään
+- `.board` + `.col` — tiheä monisarakkeinen dashboard-ruudukko
+- `.panel`, `.panel--accent` — viistekulmainen paneeli kultaisella
+  gradienttireunalla (clip-path + kaksi pseudoelementtikerrosta);
+  accent-versiossa oranssi gradienttiotsikko
+- `.subhead` — paneelin sisäiset alaotsikot
+- `.stat`, `.stat__value(--amber|--blue|--sm)`, `.stat-row` — tunnusluvut
 - `.badge(--amber|--green|--outline)`, `.status-dot(--warn|--err)`
-- `.bars` + `.bars__bar(--blue)` — CSS-pylväskaavio
+- `.inset` — ruudukkotaustainen kaaviopohja
+- `.bars`, `.bars--3d`, `.bars--spark` + `.bars__bar(--blue)` —
+  pylväskaaviot; `--3d` lisää kuutiomaisen ylä- ja kylkipinnan
+- `.chart-line` — hehkutyylit SVG-viivakaavioille
 - `.hbar-list` — top-listat vaakapalkeilla
-- `.gauge` (`style="--gauge: 30"`) — rengasmittari conic-gradientilla
-- `.progress`, `.terminal`, `.table`, `.feed`, `.btn(--primary)`
+- `.donut` (`--s1/--s2/--s3` tai `--d`) — donitsikaavio conic-gradientilla
+- `.ring-gauge` + `.ring` (`--p`, `--c`, `--i`) — monirenkainen
+  Terveyspisteet-mittari asteikkoviivoineen (`.ring--ticks`)
+- `.bubbles` + `.bubble(--amber)` — kuplakaavio
+- `.progress`, `.terminal`, `.loglist`, `.table`, `.kv`, `.feed`,
+  `.btn(--primary)`, `.legend`
+
+3D-konehuonetausta (perspektiivinen katto ja lattia) piirretään
+`body::before/::after`-kerroksilla (`base.css`); sisältö on niiden
+yläpuolella (`.app { z-index: 1 }`).
