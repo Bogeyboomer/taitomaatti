@@ -113,3 +113,4 @@ Keskity: markkinan koko, kasvuvauhti, keskeiset toimijat, trendit, sääntely, e
 - Ristiintarkista kriittiset väitteet useasta lähteestä
 - Ilmoita aina tutkimuksen rajoitukset
 - Tallenna lähteet — ne ovat tutkimuksen arvo
+- **AI-synteesityökalut 2026:** Elicit (discovery), NotebookLM/Atlas (synthesis), Scite (citations) — vähentävät työtä 50–70%

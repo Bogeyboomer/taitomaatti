@@ -5,7 +5,7 @@ description: "Data-analyysi, visualisointi ja raportointi Pythonilla. Käytä ai
 
 # Data-analyysi — Datan analysointi ja visualisointi
 
-Kattava taito datan analysointiin, visualisointiin ja raportointiin Python-ekosysteemillä.
+Kattava taito datan analysointiin, visualisointiin ja raportointiin Python-ekosysteemillä. **2026 stack:** Polars (uudet projektit, 10–100x nopeampi) + DuckDB (SQL suurille tiedostoille) + Pandas (yhteensopivuus).
 
 ## Milloin käyttää
 
