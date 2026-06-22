@@ -3,10 +3,13 @@
     {
       "name": "suomi-sisalto",
       "created": "2026-04-13", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 340, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-19", "change": "Tiivistetty 4 685 → 3 040 merkkiä, description 83 → 27 sanaa, palautettu generated-skills-kansioon"}],
+      "changelog": [
+        {"date": "2026-04-19", "change": "Tiivistetty 4 685 → 3 040 merkkiä, description 83 → 27 sanaa, palautettu generated-skills-kansioon"},
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (3040 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://kotus.fi/ohjeet", "https://oikofix.com", "https://adverbum.com/en/blog/best-finnish-localization-practices"],
       "category": "kieli-ja-sisalto",
@@ -20,12 +23,13 @@
     {
       "name": "data-analyysi",
       "created": "2026-04-13", "updated": "2026-06-15",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "current",
       "word_count": 506, "has_details_file": false,
       "backup_exists": true,
       "changelog": [
         {"date": "2026-04-19", "change": "Palautettu generated-skills-kansioon (puuttui lähteestä)"},
-        {"date": "2026-06-15", "change": "Päivitetty 2026 stack: Polars (uudet projektit) + DuckDB (SQL) + Pandas (yhteensopivuus). DuckDB lisätty external_tools."}
+        {"date": "2026-06-15", "change": "Päivitetty 2026 stack: Polars (uudet projektit) + DuckDB (SQL) + Pandas (yhteensopivuus). DuckDB lisätty external_tools."},
+        {"date": "2026-06-22", "change": "Auditointi: 7 pv vanha → current. Tiedosto OK (4436 B)."}
       ],
       "status": "active",
       "sources": ["https://nerdleveltech.com/mastering-python-data-analysis-in-2026-from-pandas-to-polars", "https://fivenumbersummary.io/blog/data-visualization-best-practices/", "https://flowfile.io/blog/polars-vs-pandas-2026/", "https://dev.to/dataformathub/python-data-processing-2026-deep-dive-into-pandas-polars-and-duckdb-2c1"],
@@ -40,12 +44,13 @@
     {
       "name": "tutkimus-synteesi",
       "created": "2026-04-13", "updated": "2026-06-15",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "current",
       "word_count": 479, "has_details_file": false,
       "backup_exists": true,
       "changelog": [
         {"date": "2026-04-19", "change": "Palautettu generated-skills-kansioon (puuttui lähteestä)"},
-        {"date": "2026-06-15", "change": "Lisätty AI-synteesityökalut 2026: Elicit (discovery), NotebookLM/Atlas (synthesis), Scite (citations) — vähentävät työtä 50-70%"}
+        {"date": "2026-06-15", "change": "Lisätty AI-synteesityökalut 2026: Elicit (discovery), NotebookLM/Atlas (synthesis), Scite (citations) — vähentävät työtä 50-70%"},
+        {"date": "2026-06-22", "change": "Auditointi: 7 pv vanha → current. Tiedosto OK (4472 B)."}
       ],
       "status": "active",
       "sources": ["https://scholar.google.com", "https://news.ycombinator.com", "https://stat.fi", "https://www.atlasworkspace.ai/blog/ai-systematic-review-tools", "https://www.zerve.ai/blog/ai-tools-for-research"],
@@ -60,10 +65,13 @@
     {
       "name": "api-testaus",
       "created": "2026-04-13", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 450, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-19", "change": "PALAUTETTU — tiedosto oli kadonnut sekä asennetusta että generated-skills-kansiosta. Kirjoitettu uudelleen, 4 110 merkkiä"}],
+      "changelog": [
+        {"date": "2026-04-19", "change": "PALAUTETTU — tiedosto oli kadonnut sekä asennetusta että generated-skills-kansiosta. Kirjoitettu uudelleen, 4 110 merkkiä"},
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (4110 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://www.aiotests.com/blog/api-testing-best-practices", "https://www.vervali.com/blog/api-test-automation-best-practices-2026"],
       "category": "testaus",
@@ -77,10 +85,13 @@
     {
       "name": "era-automaatio",
       "created": "2026-04-13", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 380, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-19", "change": "Tiivistetty 5 258 → 3 463 merkkiä, description 72 → 28 sanaa, palautettu generated-skills-kansioon"}],
+      "changelog": [
+        {"date": "2026-04-19", "change": "Tiivistetty 5 258 → 3 463 merkkiä, description 72 → 28 sanaa, palautettu generated-skills-kansioon"},
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (3463 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://docs.python.org/3/library/pathlib.html", "https://pillow.readthedocs.io/"],
       "category": "automaatio",
@@ -94,10 +105,13 @@
     {
       "name": "managed-agents",
       "created": "2026-04-17", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 430, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-19", "change": "Tiivistetty 5 979 → 3 885 merkkiä, description 67 → 28 sanaa"}],
+      "changelog": [
+        {"date": "2026-04-19", "change": "Tiivistetty 5 979 → 3 885 merkkiä, description 67 → 28 sanaa"},
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (3885 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://platform.claude.com/docs/en/managed-agents/overview", "https://www.the-ai-corner.com/p/claude-managed-agents-guide-2026"],
       "category": "ai-kehitys",
@@ -111,10 +125,13 @@
     {
       "name": "konteksti-insinoorointi",
       "created": "2026-04-17", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 460, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-19", "change": "Tiivistetty 6 828 → 4 038 merkkiä, description 64 → 25 sanaa"}],
+      "changelog": [
+        {"date": "2026-04-19", "change": "Tiivistetty 6 828 → 4 038 merkkiä, description 64 → 25 sanaa"},
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (4038 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents", "https://www.the-ai-corner.com/p/context-engineering-guide-2026"],
       "category": "ai-kehitys",
@@ -128,10 +145,13 @@
     {
       "name": "pwa-kehitys",
       "created": "2026-04-17", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 420, "has_details_file": true,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-19", "change": "Jaettu SKILL.md (3 615) + DETAILS.md (4 135), description 70 → 28 sanaa"}],
+      "changelog": [
+        {"date": "2026-04-19", "change": "Jaettu SKILL.md (3 615) + DETAILS.md (4 135), description 70 → 28 sanaa"},
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (3615 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://vite-pwa-org.netlify.app/guide/", "https://github.com/vite-pwa/vite-plugin-pwa"],
       "category": "frontend-kehitys",
@@ -145,10 +165,12 @@
     {
       "name": "ultraplan",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 370, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (2464 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://code.claude.com/docs/en/ultraplan", "https://claudefa.st/blog/guide/mechanics/ultraplan", "https://devops.com/claude-codes-ultraplan-bridges-the-gap-between-planning-and-execution/"],
       "category": "claude-code",
@@ -162,10 +184,12 @@
     {
       "name": "react-tila-hallinta",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 340, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (2533 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://viprasol.com/blog/state-management-react-2026/", "https://www.pkgpulse.com/blog/react-state-management-2026", "https://dev.to/jsgurujobs/state-management-in-2026-zustand-vs-jotai-vs-redux-toolkit-vs-signals-2gge"],
       "category": "frontend-kehitys",
@@ -179,10 +203,12 @@
     {
       "name": "supabase-integraatio",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 480, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (3274 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://supabase.com/docs/guides/getting-started/quickstarts/reactjs", "https://www.zignuts.com/blog/firebase-vs-supabase", "https://docs.bswen.com/blog/2026-03-18-supabase-backend-react-native-setup/"],
       "category": "backend",
@@ -196,10 +222,12 @@
     {
       "name": "typescript-siirtymä",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 450, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (3163 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html", "https://www.sitepoint.com/how-to-migrate-a-react-app-to-typescript/", "https://hackernoon.com/how-to-migrate-a-react-project-from-javascript-to-typescript"],
       "category": "frontend-kehitys",
@@ -213,10 +241,13 @@
     {
       "name": "react-testaus",
       "created": "2026-04-18", "updated": "2026-04-24",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "current",
       "word_count": 445, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [{"date": "2026-04-24", "change": "Lisätty Vitest 4 → Vite ≥6 vaatimus + varoitus Pukkarin Vite 5 -yhteensopimattomuudesta"}],
+      "changelog": [
+        {"date": "2026-04-24", "change": "Lisätty Vitest 4 → Vite ≥6 vaatimus + varoitus Pukkarin Vite 5 -yhteensopimattomuudesta"},
+        {"date": "2026-06-22", "change": "Auditointi: 59 pv vanha → current (raja-arvo). Tiedosto OK (4366 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://vitest.dev/guide/", "https://testing-library.com/docs/react-testing-library/intro/"],
       "category": "testaus",
@@ -230,10 +261,12 @@
     {
       "name": "git-tyonkulut",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 480, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (3922 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://www.conventionalcommits.org/", "https://docs.github.com/en/actions", "https://trunkbaseddevelopment.com/"],
       "category": "devops",
@@ -247,10 +280,12 @@
     {
       "name": "lomake-validointi",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 450, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (4169 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://react-hook-form.com/", "https://zod.dev/"],
       "category": "frontend-kehitys",
@@ -264,10 +299,12 @@
     {
       "name": "react-deploy",
       "created": "2026-04-18", "updated": "2026-04-18",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 470, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 65 pv vanha → warning. Tiedosto OK (4342 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://vercel.com/docs/frameworks/vite", "https://docs.netlify.com/frameworks/vite/", "https://vitejs.dev/guide/static-deploy.html"],
       "category": "devops",
@@ -281,10 +318,12 @@
     {
       "name": "claude-routines",
       "created": "2026-04-19", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 440, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (3979 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://code.claude.com/docs/en/routines", "https://claude.com/blog/introducing-routines-in-claude-code", "https://9to5mac.com/2026/04/14/anthropic-adds-repeatable-routines-feature-to-claude-code-heres-how-it-works/"],
       "category": "claude-code",
@@ -298,10 +337,12 @@
     {
       "name": "claude-code-desktop",
       "created": "2026-04-19", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 430, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (4182 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://www.macrumors.com/2026/04/15/anthropic-rebuilds-claude-code-desktop-app/", "https://devtoolpicks.com/blog/claude-code-desktop-redesign-parallel-sessions-2026"],
       "category": "claude-code",
@@ -315,10 +356,12 @@
     {
       "name": "shadcn-ui",
       "created": "2026-04-19", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 470, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (4284 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://ui.shadcn.com/", "https://ui.shadcn.com/docs/tailwind-v4", "https://designrevision.com/blog/shadcn-ui-guide"],
       "category": "frontend-kehitys",
@@ -332,10 +375,12 @@
     {
       "name": "react-compiler",
       "created": "2026-04-19", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 440, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (4437 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://react.dev/learn/react-compiler", "https://react.dev/blog/2025/10/07/react-compiler-1", "https://www.live-laugh-love.world/blog/react-compiler-migration-guide-2026/"],
       "category": "frontend-kehitys",
@@ -349,10 +394,12 @@
     {
       "name": "tanstack-ekosysteemi",
       "created": "2026-04-19", "updated": "2026-04-19",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 450, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 64 pv vanha → warning. Tiedosto OK (4456 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://tanstack.com/router/latest", "https://www.pkgpulse.com/blog/tanstack-router-vs-react-router-v7-2026", "https://tanstack.com/table/latest"],
       "category": "frontend-kehitys",
@@ -366,10 +413,12 @@
     {
       "name": "vite-paivitys",
       "created": "2026-04-24", "updated": "2026-04-24",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "current",
       "word_count": 390, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 59 pv vanha → current (raja-arvo). Tiedosto OK (3686 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://vite.dev/blog/announcing-vite8", "https://vite.dev/guide/migration", "https://byteiota.com/vite-8-rolldown-migration-guide-10-30x-faster-builds/"],
       "category": "devops",
@@ -383,10 +432,12 @@
     {
       "name": "animaatiot-ja-siirtymät",
       "created": "2026-04-20", "updated": "2026-04-20",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 410, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 63 pv vanha → warning. Tiedosto OK (3644 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://motion.dev/docs/react", "https://motion.dev/docs/react-animate-view", "https://motion.dev/docs/react-layout-animations"],
       "category": "frontend-kehitys",
@@ -400,10 +451,12 @@
     {
       "name": "virhekasittely-tuotanto",
       "created": "2026-04-20", "updated": "2026-04-20",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 420, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 63 pv vanha → warning. Tiedosto OK (4008 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://docs.sentry.io/platforms/javascript/guides/react/", "https://docs.sentry.io/platforms/javascript/guides/react/features/error-boundary/", "https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/"],
       "category": "frontend-kehitys",
@@ -417,10 +470,12 @@
     {
       "name": "liiketoiminta-analytiikka",
       "created": "2026-04-20", "updated": "2026-04-20",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 430, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 63 pv vanha → warning. Tiedosto OK (4118 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://www.landbase.com/blog/tam-vs-sam-vs-som-calculate-b2b-2026", "https://qubit.capital/blog/bottom-up-market-sizing", "https://www.charlia.io/en/blog/tam-sam-som-market-sizing-complete-guide"],
       "category": "liiketoiminta",
@@ -434,10 +489,12 @@
     {
       "name": "react-native-expo",
       "created": "2026-04-20", "updated": "2026-04-20",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "warning",
       "word_count": 440, "has_details_file": false,
       "backup_exists": true,
-      "changelog": [],
+      "changelog": [
+        {"date": "2026-06-22", "change": "Auditointi: 63 pv vanha → warning. Tiedosto OK (4039 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://docs.expo.dev/router/introduction/", "https://adevs.com/blog/why-react-native-still-leads-cross-platform-development-in-2026/", "https://medium.com/@onix_react/what-to-expect-from-expo-sdk-52-48c28c07db6a"],
       "category": "mobiili",
@@ -451,10 +508,13 @@
     {
       "name": "toimiala-ai-skannaus",
       "created": "2026-06-15", "updated": "2026-06-15",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "current",
       "word_count": 355, "has_details_file": false,
       "backup_exists": false,
-      "changelog": [{"date": "2026-06-15", "change": "Luotu sessioanalyysin perusteella — käyttäjä tekee toistuvasti 'täysi skannaus' -toimintoja toimialoille (logistiikka, rakennus, koulutus, terveydenhuolto) B2B AI-agentti-mahdollisuuksien löytämiseksi"}],
+      "changelog": [
+        {"date": "2026-06-15", "change": "Luotu sessioanalyysin perusteella — käyttäjä tekee toistuvasti 'täysi skannaus' -toimintoja toimialoille (logistiikka, rakennus, koulutus, terveydenhuolto) B2B AI-agentti-mahdollisuuksien löytämiseksi"},
+        {"date": "2026-06-22", "change": "Auditointi: 7 pv vanha → current. Tiedosto OK (3259 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://guptadeepak.com/generative-engine-optimization-geo-market-research-industry-analysis-2026/", "https://tech-insider.org/agentic-ai-enterprise-2026-market-analysis/", "https://0g.ai/blog/agentic-ai-market-infra-2026"],
       "category": "liiketoiminta",
@@ -468,10 +528,13 @@
     {
       "name": "ai-persona-rakentaminen",
       "created": "2026-06-15", "updated": "2026-06-15",
-      "last_audit": "2026-06-15", "audit_status": "current",
+      "last_audit": "2026-06-22", "audit_status": "current",
       "word_count": 390, "has_details_file": false,
       "backup_exists": false,
-      "changelog": [{"date": "2026-06-15", "change": "Luotu sessioanalyysin perusteella — käyttäjä rakentaa toistuvasti AI-persoonia (Aatos v5.5, B2B Discovery Engine) monimutkaisilla system prompteilla ja HTML-käyttöliittymillä"}],
+      "changelog": [
+        {"date": "2026-06-15", "change": "Luotu sessioanalyysin perusteella — käyttäjä rakentaa toistuvasti AI-persoonia (Aatos v5.5, B2B Discovery Engine) monimutkaisilla system prompteilla ja HTML-käyttöliittymillä"},
+        {"date": "2026-06-22", "change": "Auditointi: 7 pv vanha → current. Tiedosto OK (3635 B). Ei muutoksia."}
+      ],
       "status": "active",
       "sources": ["https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices", "https://promptarch.ai/blog/ai-system-prompt-best-practices-2026", "https://www.jenova.ai/en/resources/ai-character-prompts"],
       "category": "ai-kehitys",
@@ -481,6 +544,44 @@
       "related_skills": ["konteksti-insinoorointi", "managed-agents"],
       "external_tools": ["Claude API", "HTML", "CSS"],
       "path": "generated-skills/ai-persona-rakentaminen/"
+    },
+    {
+      "name": "monikielisyys-react",
+      "created": "2026-06-22", "updated": "2026-06-22",
+      "last_audit": "2026-06-22", "audit_status": "current",
+      "word_count": 418, "has_details_file": false,
+      "backup_exists": false,
+      "changelog": [
+        {"date": "2026-06-22", "change": "Luotu sessioanalyysin perusteella — Pukkari-projekti (sessio 2026-04-20/21) vaati monikielisyyttä: FI/EN/SV/DE/ES/IT/FR. Ei olemassa olevaa taitoa katettu tätä tarvetta."}
+      ],
+      "status": "active",
+      "sources": ["https://www.pkgpulse.com/blog/best-i18n-libraries-react-2026", "https://intlpull.com/blog/react-i18next-internationalization-guide-2026", "https://dev.to/feidou/react-internationalization-complete-guide-2026-from-zero-to-production-ready-multilingual-apps-4pen"],
+      "category": "frontend-kehitys",
+      "description_fi": "Monikielituki React-sovellukseen react-i18next-kirjastolla — kielen tunnistus, käännöstiedostot, kielen vaihto",
+      "description_en": "Multi-language support for React apps with react-i18next — language detection, translation files, language switcher",
+      "trigger_phrases": ["kielenvaihto", "monikielisyys", "i18n", "internationalization", "käännökset sovelluksessa", "translation support", "react-i18next", "lisää kieliä", "language switcher"],
+      "related_skills": ["suomi-sisalto", "typescript-siirtymä", "shadcn-ui"],
+      "external_tools": ["react-i18next", "i18next", "i18next-browser-languagedetector"],
+      "path": "generated-skills/monikielisyys-react/"
+    },
+    {
+      "name": "kalenteri-tapahtumahallinta",
+      "created": "2026-06-22", "updated": "2026-06-22",
+      "last_audit": "2026-06-22", "audit_status": "current",
+      "word_count": 467, "has_details_file": false,
+      "backup_exists": false,
+      "changelog": [
+        {"date": "2026-06-22", "change": "Luotu sessioanalyysin perusteella — Pukkari-projekti sisälsi laajan tapahtumahallinnan (harjoitukset, kotipeli, vieraspeli, turnaus, leiri, matka) ehdollisine kenttineen ja aikaslotteineen. Ei olemassa olevaa taitoa."}
+      ],
+      "status": "active",
+      "sources": ["https://reactscript.com/top-10-calendar-components-react-react-native/", "https://www.builder.io/blog/best-react-calendar-component-ai", "https://blog.logrocket.com/best-react-scheduler-component-libraries/"],
+      "category": "frontend-kehitys",
+      "description_fi": "React-kalenteri ja tapahtumaeditori — react-big-calendar tai shadcn DatePicker, tapahtumatyypit, ehdolliset kentät",
+      "description_en": "React calendar and event editor — react-big-calendar or shadcn DatePicker, event types, conditional fields",
+      "trigger_phrases": ["kalenteri", "tapahtumaeditori", "event calendar", "react-big-calendar", "tapahtuman luonti", "DatePicker", "aikataulutus", "tapahtumatyypit", "turnauskalenteri"],
+      "related_skills": ["lomake-validointi", "shadcn-ui", "react-tila-hallinta", "monikielisyys-react"],
+      "external_tools": ["react-big-calendar", "shadcn/ui Calendar", "date-fns"],
+      "path": "generated-skills/kalenteri-tapahtumahallinta/"
     }
   ],
   "meta_skill": {
@@ -489,7 +590,7 @@
     "description": "Meta-taito joka luo ja hallinnoi muita taitoja automaattisesti",
     "word_count": 460,
     "has_details_file": true,
-    "last_audit": "2026-06-15",
+    "last_audit": "2026-06-22",
     "audit_status": "current",
     "changelog": [
       {"date": "2026-04-19", "change": "Lisätty Vaihe 0 (tiedoston olemassaolotarkistus) + perussääntö: auditointi käy aina läpi KAIKKI taidot, ei ohituksia"},
@@ -497,7 +598,7 @@
     ]
   },
   "category_balance": {
-    "frontend-kehitys": 9,
+    "frontend-kehitys": 11,
     "claude-code": 3,
     "devops": 3,
     "testaus": 2,
@@ -509,12 +610,12 @@
     "kieli-ja-sisalto": 1,
     "liiketoiminta": 2,
     "mobiili": 1,
-    "total": 28,
-    "last_calculated": "2026-06-15",
-    "imbalance_warning": "frontend-kehitys 32% (9/28) — alle 40% kynnyksen, OK"
+    "total": 30,
+    "last_calculated": "2026-06-22",
+    "imbalance_warning": "frontend-kehitys 37% (11/30) — alle 40% kynnyksen, OK"
   },
-  "last_scan": "2026-06-15",
-  "last_audit": "2026-06-15",
+  "last_scan": "2026-06-22",
+  "last_audit": "2026-06-22",
   "existing_skills_analyzed": [
     "algorithmic-art", "brainstorming", "brand-guidelines", "canvas-design",
     "code-reviewer", "consolidate-memory", "data-analyysi", "design-an-interface",
@@ -540,10 +641,13 @@
     {"name": "b2b-markkina-analyysi", "resolved_by": "liiketoiminta-analytiikka", "resolved": "2026-04-20", "note": "TAM/SAM/SOM + ICP, B2B-agentti-projektille"},
     {"name": "native-mobiili", "resolved_by": "react-native-expo", "resolved": "2026-04-20", "note": "Expo SDK 52, relevantti Pukkarin native-versioon"},
     {"name": "toimiala-skannaus-metodologia", "resolved_by": "toimiala-ai-skannaus", "resolved": "2026-06-15", "note": "Käyttäjä teki toistuvasti 'täysi skannaus' ilman yhtenäistä metodologiaa"},
-    {"name": "ai-persona-luonti", "resolved_by": "ai-persona-rakentaminen", "resolved": "2026-06-15", "note": "Aatos v5.5 ja B2B Discovery Engine -sessiosta tunnistettu tarve"}
+    {"name": "ai-persona-luonti", "resolved_by": "ai-persona-rakentaminen", "resolved": "2026-06-15", "note": "Aatos v5.5 ja B2B Discovery Engine -sessiosta tunnistettu tarve"},
+    {"name": "monikielisyys-react", "resolved_by": "monikielisyys-react", "resolved": "2026-06-22", "note": "Pukkari vaati FI/EN/SV/DE/ES/IT/FR tuen — ei olemassa olevaa i18n-taitoa"},
+    {"name": "kalenteri-tapahtumahallinta", "resolved_by": "kalenteri-tapahtumahallinta", "resolved": "2026-06-22", "note": "Pukkari sisälsi laajan tapahtumaeditorin eri tapahtumatyypeillä ja ehdollisilla kentillä"}
   ],
   "next_actions": [
-    "Seuraava auditointi: 2026-08-17 (63 pv kuluttua)",
+    "Seuraava auditointi: 2026-08-21 (60 pv kuluttua)",
+    "22 taitoa warning-tilassa (63-65 pv) — vanhenevat yli 120 pv:n raja elokuun lopussa, päivitä silloin",
     "Seuraa: e2e-testaus (Playwright) — matala prioriteetti, harkitaan kun Pukkari-backend valmis",
     "Seuraa: WordPress/WooCommerce — vain yksi sessio (Templates), ei vielä riittävää toistoa"
   ]
